@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.layout {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: "sidebar contentBody";
+
+  .sidebar {
+    grid-area: sidebar;
+    width: 100%;
+    height: 100vh;
+    background: blue;
+    padding: 40px 30px;
+
+    h2 {
+      text-align: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 35px;
+    }
+
+    .nav-link {
+      text-align: center;
+      color: #fff;
+      font-size: 25px;
+      margin: 70px 0;
+      display: block;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .selected-link {
+      opacity: 0.8;
+    }
+  }
+
+  .content {
+    grid-area: contentBody;
+    padding: 50px;
+    overflow-y: scroll;
+  }
+}
